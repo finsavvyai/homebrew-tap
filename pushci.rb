@@ -10,7 +10,7 @@ class Pushci < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/finsavvyai/push-ci.dev/releases/download/v1.4.4/pushci_1.4.4_darwin_amd64.tar.gz"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.4.4/pushci_1.4.4_darwin_amd64.tar.gz"
       sha256 "e8466106d0214b84184b58c989409275b9880bde4e54114300a9f30b36d6bae1"
 
       define_method(:install) do
@@ -18,7 +18,7 @@ class Pushci < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/finsavvyai/push-ci.dev/releases/download/v1.4.4/pushci_1.4.4_darwin_arm64.tar.gz"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.4.4/pushci_1.4.4_darwin_arm64.tar.gz"
       sha256 "f74ff83f621761ed3cfbda6aceb6bf3c3b053aa982a2e9f550f7e6020d1aa8a9"
 
       define_method(:install) do
@@ -29,14 +29,14 @@ class Pushci < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/finsavvyai/push-ci.dev/releases/download/v1.4.4/pushci_1.4.4_linux_amd64.tar.gz"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.4.4/pushci_1.4.4_linux_amd64.tar.gz"
       sha256 "41a2ac5f1fdc7efdacd9863092e1161eab0578e884e83526babc9d8130e2d47e"
       define_method(:install) do
         bin.install "pushci"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/finsavvyai/push-ci.dev/releases/download/v1.4.4/pushci_1.4.4_linux_arm64.tar.gz"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.4.4/pushci_1.4.4_linux_arm64.tar.gz"
       sha256 "de7034f7184e0aae34fe2a557543e0c07261f9d67f3dff7f7308a0cc710e1e17"
       define_method(:install) do
         bin.install "pushci"
