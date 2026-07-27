@@ -5,21 +5,21 @@
 class Pushci < Formula
   desc "AI-native CI/CD — zero config, runs on your machine, free forever"
   homepage "https://pushci.dev"
-  version "1.9.9"
+  version "1.10.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.9.9/pushci_1.9.9_darwin_amd64.tar.gz"
-      sha256 "04db432ca9c968e03b0be31bbceff5ae2b1460135c5130552a4810760884ef4c"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.10.0/pushci_1.10.0_darwin_amd64.tar.gz"
+      sha256 "471ccd77be85a005490945cc9533fcd54d54a0c05f860e466a108b946f716096"
 
       define_method(:install) do
         bin.install "pushci"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.9.9/pushci_1.9.9_darwin_arm64.tar.gz"
-      sha256 "3febd4c2e0508b7fbde54e6bd073528b1d1ffd2a76523cc7b3a698d22f4be571"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.10.0/pushci_1.10.0_darwin_arm64.tar.gz"
+      sha256 "cdbe64e372f61df933ab6af89baa7c578933fdffeefca45a5ab58cceb4e2d297"
 
       define_method(:install) do
         bin.install "pushci"
@@ -29,15 +29,15 @@ class Pushci < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.9.9/pushci_1.9.9_linux_amd64.tar.gz"
-      sha256 "5fcd120fe1be616dcd3ab3d209cd24a8e85db5e61bef680d9994ce71933857cc"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.10.0/pushci_1.10.0_linux_amd64.tar.gz"
+      sha256 "d6ba0108cc423b88db07715ee144d2d1fd1ad0d0784ed39006ce462cc983ea5f"
       define_method(:install) do
         bin.install "pushci"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.9.9/pushci_1.9.9_linux_arm64.tar.gz"
-      sha256 "de5f45372ae858cf8bd262d5221467143dbdb30853a6e223d4f891c3b6964637"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v1.10.0/pushci_1.10.0_linux_arm64.tar.gz"
+      sha256 "bcd4d7526023b4eb8a378c199f6fb9734273322fb648485ec83eca9a08b95e01"
       define_method(:install) do
         bin.install "pushci"
       end
