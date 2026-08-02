@@ -3,34 +3,33 @@ cask "pushci" do
   version "1.10.10"
 
   on_macos do
-    on_intel do
-      url "https://github.com/finsavvyai/pushci-cli/releases/download/v#{version}/pushci_#{version}_darwin_amd64.tar.gz",
-        verified: "github.com/finsavvyai/pushci-cli/"
-      sha256 "6389bc631175ab51efaca085e394a176460971d62a883893ce758fec4b40eddd"
-    end
     on_arm do
-      url "https://github.com/finsavvyai/pushci-cli/releases/download/v#{version}/pushci_#{version}_darwin_arm64.tar.gz",
-        verified: "github.com/finsavvyai/pushci-cli/"
       sha256 "8a8eb2a91bd666f2230cdcd3d515bfd485970b3e7f141f63daa0446ba2f5fd29"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v#{version}/pushci_#{version}_darwin_arm64.tar.gz",
+          verified: "github.com/finsavvyai/pushci-cli/"
+    end
+    on_intel do
+      sha256 "6389bc631175ab51efaca085e394a176460971d62a883893ce758fec4b40eddd"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v#{version}/pushci_#{version}_darwin_amd64.tar.gz",
+          verified: "github.com/finsavvyai/pushci-cli/"
     end
   end
-
   on_linux do
-    on_intel do
-      url "https://github.com/finsavvyai/pushci-cli/releases/download/v#{version}/pushci_#{version}_linux_amd64.tar.gz",
-        verified: "github.com/finsavvyai/pushci-cli/"
-      sha256 "5e66ad3ad10605e96f8235e288d18fdb2eb074757b3cf3796bc7681b6606bd88"
-    end
     on_arm do
-      url "https://github.com/finsavvyai/pushci-cli/releases/download/v#{version}/pushci_#{version}_linux_arm64.tar.gz",
-        verified: "github.com/finsavvyai/pushci-cli/"
       sha256 "af862b0048fc645f6ed7616fdceee578563217636b208c629d4be109918ef963"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v#{version}/pushci_#{version}_linux_arm64.tar.gz",
+          verified: "github.com/finsavvyai/pushci-cli/"
+    end
+    on_intel do
+      sha256 "5e66ad3ad10605e96f8235e288d18fdb2eb074757b3cf3796bc7681b6606bd88"
+      url "https://github.com/finsavvyai/pushci-cli/releases/download/v#{version}/pushci_#{version}_linux_amd64.tar.gz",
+          verified: "github.com/finsavvyai/pushci-cli/"
     end
   end
 
   name "pushci"
   desc "AI-native CI/CD — zero config, runs on your machine, free forever"
-  homepage "https://pushci.dev"
+  homepage "https://pushci.dev/"
 
   livecheck do
     skip "Auto-generated on release."
@@ -39,5 +38,4 @@ cask "pushci" do
   binary "pushci"
 
   # No zap stanza required
-
 end
